@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja da Maria | Happy Store Comercio de Presentes e Brinquedos LTDA</title>
+  <meta name="description" content="Loja da Maria, nome fantasia da Happy Store Comercio de Presentes e Brinquedos LTDA, CNPJ 19.138.297/0001-84, comercio varejista de brinquedos em Sao Paulo, SP.">
+  <style>
+    :root {
+      --ink: #202026;
+      --muted: #666471;
+      --paper: #fffdf8;
+      --soft: #f5efe4;
+      --line: #e4dac9;
+      --red: #bd3e35;
+      --blue: #2f6d8f;
+      --yellow: #e7b83d;
+      --green: #4f8a64;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid var(--ink);
+      background: rgba(255,253,248,.96);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .mark {
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      box-shadow: 5px 5px 0 var(--blue);
+    }
+
+    .links {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .links a { text-decoration: none; }
+    .links a:hover { color: var(--red); }
+
+    .hero {
+      min-height: 620px;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(255,253,248,.95), rgba(255,253,248,.76) 45%, rgba(255,253,248,.22)),
+        url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1600&q=82") center/cover;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 44px));
+      margin: 0 auto;
+      padding: 84px 0 64px;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 20px 0 18px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .93;
+      letter-spacing: 0;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 0;
+      font-size: clamp(18px, 2.3vw, 24px);
+      color: #34323a;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 22px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font: 900 clamp(30px, 4vw, 48px)/1 Georgia, "Times New Roman", serif;
+    }
+
+    p { margin: 0 0 16px; }
+
+    .panel {
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 26px;
+      box-shadow: 8px 8px 0 var(--yellow);
+    }
+
+    .facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .fact {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 2px;
+    }
+
+    .band {
+      background:
+        linear-gradient(90deg, rgba(189,62,53,.08), transparent 35%),
+        var(--soft);
+      border-block: 2px solid var(--ink);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      min-height: 220px;
+      background: var(--white);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .card:nth-child(1) { box-shadow: 6px 6px 0 var(--red); }
+    .card:nth-child(2) { box-shadow: 6px 6px 0 var(--blue); }
+    .card:nth-child(3) { box-shadow: 6px 6px 0 var(--green); }
+
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid var(--ink);
+      background: var(--yellow);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 22px; }
+
+    .cta {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 32px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 18px;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      background: var(--yellow);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 34px 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    @media (max-width: 840px) {
+      .links { display: none; }
+      .hero { min-height: 560px; }
+      .split, .cards, .cta { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navegacao principal">
+      <div class="brand"><span class="mark">LM</span><span>Loja da Maria</span></div>
+      <div class="links">
+        <a href="#empresa">Empresa</a>
+        <a href="#produtos">Produtos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="tag">Sao Paulo / SP</span>
+        <h1>Loja da Maria</h1>
+        <p class="lead">Nome fantasia da Happy Store Comercio de Presentes e Brinquedos LTDA, varejo de brinquedos, artigos recreativos, papelaria e presentes.</p>
+      </div>
+    </section>
+
+    <section class="wrap split" id="empresa">
+      <aside class="panel" aria-label="Dados cadastrais">
+        <div class="facts">
+          <div class="fact"><strong>Razao social</strong><span>Happy Store Comercio de Presentes e Brinquedos LTDA</span></div>
+          <div class="fact"><strong>CNPJ</strong><span>19.138.297/0001-84</span></div>
+          <div class="fact"><strong>Data de abertura</strong><span>25/10/2013</span></div>
+          <div class="fact"><strong>Endereco</strong><span>Avenida Miguel de Castro, 977, Vila Pereira Barreto, Sao Paulo - SP, CEP 02950-000</span></div>
+        </div>
+      </aside>
+      <div>
+        <h2>Comercio varejista com informacao clara</h2>
+        <p>A Loja da Maria e o nome fantasia da Happy Store Comercio de Presentes e Brinquedos LTDA, sociedade empresaria limitada registrada no Brasil.</p>
+        <p>O site apresenta dados institucionais e areas de atuacao da empresa, com foco em transparencia para consumidores, parceiros e plataformas comerciais.</p>
+      </div>
+    </section>
+
+    <section class="band" id="produtos">
+      <div class="wrap">
+        <h2>Areas de atuacao</h2>
+        <p>A atividade principal cadastrada e 47.63-6-01, comercio varejista de brinquedos e artigos recreativos.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="num">1</span>
+            <h3>Brinquedos e recreacao</h3>
+            <p>Comercio varejista de brinquedos, jogos e artigos recreativos, conforme cadastro empresarial.</p>
+          </article>
+          <article class="card">
+            <span class="num">2</span>
+            <h3>Papelaria e presentes</h3>
+            <p>Itens de papelaria, presentes e produtos de uso pessoal ou domestico em geral.</p>
+          </article>
+          <article class="card">
+            <span class="num">3</span>
+            <h3>Acessorios eletronicos</h3>
+            <p>Comercio varejista especializado de pecas e acessorios para aparelhos eletroeletronicos de uso domestico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Atendimento institucional</h2>
+          <p>Consulte os dados comerciais da empresa ou acesse o canal de contato para solicitacoes.</p>
+        </div>
+        <a class="button" href="contato.html">Acessar contato</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Happy Store Comercio de Presentes e Brinquedos LTDA - CNPJ 19.138.297/0001-84</span>
+      <span class="footer-links"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="contato.html">Contato</a></span>
+    </div>
+  </footer>
+</body>
+</html>
